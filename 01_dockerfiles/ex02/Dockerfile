@@ -6,6 +6,8 @@ ONBUILD COPY app /opt/app
 
 ONBUILD WORKDIR /opt/app
 
+ONBUILD ADD Gemfile /opt/app/Gemfile
+ONBUILD ADD Gemfile.lock /opt/app/Gemfile.lock
 
 ONBUILD EXPOSE 3000
 ONBUILD RUN bundle install
